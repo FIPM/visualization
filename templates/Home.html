@@ -1,0 +1,44 @@
+{% extends "Layout.html" %}
+{%block content %}
+
+<main>
+    <section>
+        <div class="container">
+            <div class="row justify-content-md-center ">
+                <div class="col col-lg-2 align-self-center">
+                    <hr/>
+                </div>
+                <div class="col-lg text-center">
+                    <h2>{{Content.Title}}</h2>
+                </div>
+                <div class="col col-lg-2 align-self-center">
+                    <hr/>
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section>
+        <div class="container">            
+            <div class="row justify-content-md-center">            
+                <div class="col-md-auto">
+                    <div class="card-body">                        
+                        <h5 class="card-title">{{Content.TitleGoal}}:</h5>
+                        <p class="card-text" style='color:#6e6a6a;font-size:18px'>{{Content.Goal}}</p>
+                        <h5 class="card-title">{{Content.TitleBenefit}}:</h5>
+                        <p class="card-text" style='color:#6e6a6a;font-size:18px'>{{Content.Benefit}}</p>
+                        <h5 class="card-title">{{Content.TitleTools}}:</h5>
+                        <p class="card-text" style='color:#6e6a6a;font-size:18px'>{{Content.Tools}}</p>
+                        <h5 class="card-title">{{Content.TitleProject}}:</h5>
+                        <p class="card-text" style='color:#6e6a6a;font-size:18px'>{{Content.ProjectText1}}</p>
+                        <p class="card-text" style='color:#6e6a6a;font-size:18px'>{{Content.ProjectText2}}</p>
+                    </div>
+                </div>                                
+            </div>            
+            <div id="Fig1" class="responsive-plot"></div>
+        </div>        
+    </section>
+</main>
+
+
+
+{% endblock %}
