@@ -165,8 +165,20 @@ hr {
 	}
 	.intro-text p {
 		font-size: 18px;
-	}
-	
-	
+	}		
 }
 
+.custom-margin-text {
+    text-align: justify;    
+    margin-right: 12%;
+    margin-left: 5%;
+    color:#6e6a6a;
+    font-size:18px
+}
+
+.custom-margin-section{
+    margin-top: -10%;
+    margin-bottom: 1%;
+    margin-right: 15%;
+    margin-left: 0%;
+}
