@@ -30,7 +30,13 @@
                 <p class="card-text custom-margin-text">{{Content.ProjectText1}}</p>
                 <p class="card-text custom-margin-text">{{Content.ProjectText2}}</p>
             </div>
-            <div id="Fig1" class="responsive-plot custom-margin-text"></div>
+            {% for i in range(1,6) %}
+                <div id="Fig{{i|string}}" class="responsive-plot custom-margin-text"></div>                
+                <div class="card-body">                
+                    <p class="card-text custom-margin-text">{{Content["ProjectText{}".format(i)]}}</p>
+                </div>    
+            {% endfor %}
+            
         </div>        
     </section>
 </main>
