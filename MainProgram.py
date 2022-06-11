@@ -8,12 +8,7 @@ import plotly.figure_factory as ff
 import plotly.express as px
 import json
 
-
-
-# Menu
-path_to_translations = os.path.join('static','translations')
-df_Navbar = pd.read_csv(os.path.join(path_to_translations,'Navbar.csv'))
-df_Content = pd.read_csv(os.path.join(path_to_translations,'Content.csv'))
+from scripts.import_data import df_Navbar, df_Content
 
 KEY = '09ffd4f2e3095ee986f2adfb497bd952'
 
