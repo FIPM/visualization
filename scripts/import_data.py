@@ -26,7 +26,7 @@ db_fig32=db_fig32[['Cod_Personal','nsmt']]
 db_fig3=db_fig3.merge(db_fig32,how='left',left_on='Cod_Personal',right_on='Cod_Personal')
 db_nsmt=db_fig3[db_fig3['nsmt']==1]
 db_smt=db_fig3[db_fig3['nsmt']==0]
-dbs=[db_nsmt,db_smt]
+db_fig3=[db_nsmt,db_smt]
 
 # Figure 5
 db_fig4=pd.read_csv('./raw_data/FactorModel_P4_HG_8_E_Latents.csv',sep=',')
@@ -46,4 +46,5 @@ db_fig4.reset_index(inplace=True)
 db_fig4=db_fig4.melt(id_vars=['Last Grade'], value_vars=['Spanish Comprehension','Family Resources'])
 db_fig4['Last Grade Reached']=db_fig4['Last Grade']
 db_fig4['Mean Value']=db_fig4['value']
+db_fig5 = db_fig4
 
