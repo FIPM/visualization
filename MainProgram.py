@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request, session
+from dotenv import dotenv_values
+
 import pandas as pd
+import os
 # plots
 import plotly
 import plotly.graph_objs as go
@@ -9,11 +12,12 @@ import json
 
 from scripts.import_data import df_Navbar, df_Content, db_fig1, db_fig2, db_fig3, db_fig5
 
-KEY = '09ffd4f2e3095ee986f2adfb497bd952'
+config = dotenv_values(".env")
 
 # creating app
 app = Flask(__name__)
-app.secret_key = KEY 
+app.secret_key = config['SECRET_KEY'] 
+
 
 # home
 @app.route('/', methods=["GET", "POST"])
