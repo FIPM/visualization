@@ -24,6 +24,13 @@
                 <p class="card-text custom-margin-text">{{Content.Goal}}</p>
                 <h5 class="card-title">{{Content.TitleBenefit}}:</h5>
                 <p class="card-text custom-margin-text">{{Content.Benefit}}</p>
+
+                <h5 class="card-title">{{Content.TitleTechnical}}:</h5>
+                <ul class="custom-margin-list">
+                    {% for j in Content.Technical.split('#') %}
+                        <li>{{j}}</li>
+                    {% endfor %}
+                </ul>
                 <h5 class="card-title">{{Content.TitleTools}}:</h5>
                 <p class="card-text custom-margin-text">{{Content.Tools}}</p>
                 <h5 class="card-title">{{Content.TitleProject}}:</h5>
