@@ -16,6 +16,7 @@ config = dotenv_values(".env")
 
 # creating app
 app = Flask(__name__)
+# added new key
 app.secret_key = config['SECRET_KEY'] 
 
 
