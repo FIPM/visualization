@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session
-from dotenv import dotenv_values
+# from dotenv import dotenv_values
 
 import pandas as pd
 import os
@@ -12,13 +12,18 @@ import json
 
 from scripts.import_data import df_Navbar, df_Content, db_fig1, db_fig2, db_fig3, db_fig5
 
-config = dotenv_values(".env")
+from os import environ
+from dotenv import load_dotenv
+
+load_dotenv('.env')
 
 # creating app
 app = Flask(__name__)
-# added new key
-app.secret_key = config['SECRET_KEY'] 
+# To run locally
+# config = dotenv_values(".env")
+# app.secret_key = config['SECRET_KEY'] 
 
+app.secret_key = os.environ['SECRET_KEY']
 
 # home
 @app.route('/', methods=["GET", "POST"])
